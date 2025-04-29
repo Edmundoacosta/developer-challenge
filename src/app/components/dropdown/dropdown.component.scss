@@ -1,0 +1,123 @@
+.dropdown {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    padding: 16px;
+    top: 40px;
+    left: 0;
+    color: #000000;
+    p.small {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .workspace {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        button {
+            background-color: #E41B12;
+            color: #FFFFFF;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    }
+    .recents {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .workspace_color {
+            background-color: orange;
+            width: 40px;
+            height: 24px;
+            border-radius: 8px;
+        }
+        .workspace_info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .title {
+                font-size: 14px;
+                font-weight: 500;
+                color: #000000;
+            }
+            .subtitle {
+                font-size: 10px;
+                color: #000000;
+            }
+        }
+    }
+    .create {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        .exit {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid #E4E4E4;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #E41B12;
+            color: #FFFFFF;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+        }
+        .colors_input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            width: 100%;
+            .box_color {
+                border-radius: 2px;
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                &.box_selected {
+                    border: 1px solid #000000;
+                }
+            }
+        }
+    }
+    .user {
+        padding: 8px;
+        .line {
+            margin: 8px 0px;
+            width: 100%;
+            height: 1px;
+            background-color: #EBE8EC;
+        }
+        .subtitle {
+            font-size: 14px;
+        }
+        .user__content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 13px;
+        }
+    }
+}

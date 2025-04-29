@@ -1,0 +1,45 @@
+<section class="dropdown" *ngIf="open">
+    <ng-container *ngIf="item.type == 0">
+        <p class="small">{{item.titleDropdown}}</p>
+        <div class="workspace">
+            <button>
+                <fa-icon [icon]="faSuitcase"></fa-icon>
+            </button>
+            <p>Financiera Oh!</p>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="item.type == 1">
+        <div class="recents">
+            <div class="workspace_color"></div>
+            <div class="workspace_info">
+                <p class="title">{{item.titleDropdown}}</p>
+                <p class="subtitle">{{item.currentUser}} workspace</p>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="item.type == 2">
+        <div class="create">
+            <div (click)="closeDropdown()" class="exit">
+                <fa-icon [icon]="faCross"></fa-icon>
+            </div>
+            <p>{{item.titleDropdown}}</p>
+            <input type="text" placeholder="Ingresa el titulo" />
+            <button>Crear board</button>
+            <div class="colors_input">
+                <div *ngFor="let color of colors" [style.background-color]="color.hex" class="box_color" [ngClass]="{'box_selected': color.selected}" (click)="selectColor(color)"></div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="item.type == 3">
+        <div class="user">
+            <p class="subtitle">{{item.currentUser}}</p>
+            <div class="line"></div>
+            <div class="user__content">
+                <p class="user__content__option">Dashboard</p>
+                <p class="user__content__option">Settings</p>
+                <p class="user__content__option">Earnings</p>
+                <p class="user__content__option">Sign out</p>
+            </div>
+        </div>
+    </ng-container>
+</section>

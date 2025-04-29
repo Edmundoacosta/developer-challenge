@@ -1,0 +1,34 @@
+<app-header></app-header>
+<section>
+    <div class="left_side">
+        <div *ngFor="let menu of valuesMenu" [ngClass]="{'selected_section': menu.active}" (click)="changeSection(menu)" class="menu">
+            <fa-icon [icon]="menu.icon" size="1x"></fa-icon>
+            <p>{{menu.name}}</p>
+        </div>
+        <div class="line"></div>
+        <div class="workspaces">
+            <h2>Workspaces</h2>
+            <button class="add_button">
+                <fa-icon [icon]="faPlus" size="1x"></fa-icon>
+            </button>
+        </div>
+        <div *ngFor="let works of workspaces" class="workspace_list" (click)="openDropdown(works)">
+            <div class="workspace_content">
+                <button class="main_button">
+                    {{works.name.charAt(0)}}
+                </button>
+                <p>{{works.name}}</p>
+                <fa-icon [icon]="works.dropdown?faCaretDown:faCaretUp" size="1x"></fa-icon>
+            </div>
+            <div class="dropdown_items" [@accordionAnimation]="works.dropdown ? 'expanded' : 'collapsed'">
+                <div *ngFor="let item of works.items" class="workspace_item">
+                    <fa-icon [icon]="item.icon" size="1x"></fa-icon>
+                    <p>{{item.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_side">
+        <h2>{{currentSide}}</h2>
+    </div>
+</section>

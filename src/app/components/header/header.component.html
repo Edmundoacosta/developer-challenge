@@ -1,0 +1,21 @@
+<header>
+    <h1>Financiera Oh!</h1>
+    <div class="right_side">
+        <nav>
+            <ul>
+                <li *ngFor="let item of headerList">
+                    <p (click)="openDropdown(item)">{{item.name}} <fa-icon [icon]="item.open?faCaretDown:faCaretUp"></fa-icon></p>
+                    <app-dropdown [item]="itemDropdown" [open]="item.open"></app-dropdown>
+                </li>
+                <li>
+                    <button>Prueba</button>
+                </li>
+            </ul>
+        </nav>
+        <div class="user">
+            <fa-icon [icon]="faUser" size="1x"></fa-icon>
+            <p class="currentUser" (click)="openDropdownUser()">{{currentUser}}</p>
+            <app-dropdown [item]="itemDropdown" [open]="openUserDropdown"></app-dropdown>
+        </div>
+    </div>
+</header>

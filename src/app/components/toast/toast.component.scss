@@ -1,0 +1,23 @@
+.toast {
+    width: 344px;
+    height: 37px;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 4px;
+    gap: 15px;
+    box-shadow: 0px 8px 18px -6px #18274B1F;
+    z-index: 99999;
+    p {
+        color: #FFFFFF;
+    }
+    &.toast_0 {
+        background-color: #4CAF50;
+    }
+    &.toast_1 {
+        background-color: #F44336;
+    }
+}

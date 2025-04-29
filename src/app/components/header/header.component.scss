@@ -1,0 +1,48 @@
+header {
+    background-color: rgb(38, 106, 184);
+    display: flex;
+    padding: 16px;
+    gap: 40px;
+    align-items: center;
+    color: #FFFFFF;
+    .right_side {
+        flex: 0 0 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                list-style: none;
+                li {
+                    position: relative;
+                    p {
+                        cursor: pointer;
+                    }
+                }
+                button {
+                    background-color: #E41B12;
+                    color: #FFFFFF;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.2s;
+                }
+            }
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            gap : 24px;
+            position: relative;
+            .currentUser {
+                cursor: pointer;
+            }
+        }
+    }
+}
